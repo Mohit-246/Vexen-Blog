@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section className="max-w-6xl mx-auto px-6 md:px-10 py-20">
+    <section className="max-w-6xl mx-auto px-6 mt-16 py-20">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
         
         {/* Text Content */}
@@ -15,9 +15,9 @@ export default function Hero() {
             Thoughts on Code, Systems, and Building Software.
           </p>
 
-          <button className="w-fit bg-amber-600 hover:bg-black hover:scale-105 transition transform ease-in-out text-white font-medium px-8 py-3 rounded-md">
+          <a href="#newsletter" className="w-fit bg-amber-500 hover:bg-black hover:scale-105 transition transform ease-in-out text-white font-medium px-8 py-3 rounded-md">
             Sign up to Newsletter
-          </button>
+          </a >
         </div>
 
         {/* Image */}
@@ -31,7 +31,6 @@ export default function Hero() {
             className="object-contain"
           />
         </div>
-
       </div>
     </section>
   );

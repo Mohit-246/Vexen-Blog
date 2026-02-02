@@ -3,6 +3,8 @@
 import { useState } from "react";
 import blogs from "@/data/blog.json";
 import { BlogCard } from "@/element/Posts";
+import { ArrowRight } from "lucide-react";
+import Link from "next/link";
 
 const SORT_OPTIONS = ["Latest", "Popular"];
 
@@ -39,10 +41,9 @@ export default function BlogList() {
   });
 
   return (
-    <section>
+    <section className="mx-auto max-w-6xl px-4">
       {/* Top Controls */}
       <div className="flex flex-wrap items-center justify-between gap-4 mb-6">
-        
         {/* Tags Bar */}
         <ul className="flex gap-3 overflow-x-auto text-sm">
           {POPULAR_TAGS.map((tag) => (
@@ -76,10 +77,16 @@ export default function BlogList() {
       </div>
 
       {/* Blog Grid */}
-      <div className="grid gap-6 sm:grid-cols-2">
-        {filteredBlogs.map((post) => (
+      <div className="grid gap-6 md:grid-cols-3 sm:grid-cols-2">
+        {filteredBlogs.slice(0, 3).map((post) => (
           <BlogCard key={post.id} post={post} />
         ))}
+      </div>
+      <div className="flex items-center justify-end mr-10">
+        <Link href={"/blog"} className="flex items-center gap-4 mt-8 text-sm text-white font-medium bg-amber-500 px-6 py-2 justify-center text-center rounded-2xl hover:scale-105 hover:bg-black transform duration-200">
+          More Blogs
+          <ArrowRight />
+        </Link >
       </div>
     </section>
   );

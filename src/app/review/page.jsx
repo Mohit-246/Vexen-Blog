@@ -1,13 +1,9 @@
-"use client";
-
 import reviews from "@/data/review.json";
 import ReviewCard from "@/element/ReviewCard";
-import { ArrowRight } from "lucide-react";
-import Link from "next/link";
 
 export default function ReviewSection() {
   return (
-    <section className="w-full py-20">
+    <div className="w-full py-20">
       <div className="mx-auto max-w-6xl px-4">
         {/* Header */}
         <div className="mb-12 max-w-2xl">
@@ -22,20 +18,11 @@ export default function ReviewSection() {
 
         {/* Reviews Grid */}
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {reviews.slice(0, 3).map((review, index) => (
+          {reviews.map((review, index) => (
             <ReviewCard key={index} review={review} />
           ))}
         </div>
-        <div className="flex items-center justify-end mr-10">
-          <Link
-            href={"/review"}
-            className="flex items-center gap-4 mt-8 text-sm text-white font-medium bg-amber-500 px-6 py-2 justify-center text-center rounded-2xl hover:scale-105 hover:bg-black transform duration-200"
-          >
-            More Reviews
-            <ArrowRight />
-          </Link>
-        </div>
       </div>
-    </section>
+    </div>
   );
 }

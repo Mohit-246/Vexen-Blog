@@ -8,7 +8,7 @@ export default function RecentBlog() {
   return (
     <>
       <div className="max-w-6xl mx-auto px-6 md:px-10 py-20">
-        <h2 className="text-2xl md:text-3xl font-semibold mb-10">Recent Blog</h2>
+        <h2 className="text-3xl md:text-3xl font-semibold mb-10">Latest Blog</h2>
         <RecentPost post={recentPost} />
       </div>
     </>

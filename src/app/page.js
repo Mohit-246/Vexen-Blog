@@ -1,17 +1,19 @@
 import BlogList from "@/component/Blogs";
 import Hero from "@/component/Hero";
-import Navbar from "@/component/Navbar";
+import NewsLetterSub from "@/component/NewsLetterSub";
 import RecentBlog from "@/component/RecentBlog";
+import ReviewSection from "@/component/Review";
 
 export default function Home() {
   return (
     <>
-      <div className="flex-col lg:mx-36 md:mx-16 mx-4 my-4 items-center ">
-        <Navbar />
+      <main>
         <Hero />
         <RecentBlog />
         <BlogList />
-      </div>
+        <ReviewSection />
+        <NewsLetterSub />
+      </main>
     </>
   );
 }

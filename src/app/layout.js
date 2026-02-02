@@ -1,5 +1,8 @@
 import "./globals.css";
 import { Google_Sans, Poppins } from "next/font/google";
+import Footer from "@/component/Footer";
+import GoToTop from "@/element/GotoTop";
+import Navbar from "@/component/Navbar";
 
 const poppin = Poppins({
   subsets: ["latin"],
@@ -25,7 +28,14 @@ export default function RootLayout({ children }) {
       ${poppin.className}
       antialiased`}
       >
-        {children}
+        <div>
+          <Navbar />
+          <main>
+            {children}
+            <GoToTop />
+          </main>
+          <Footer />
+        </div>
       </body>
     </html>
   );

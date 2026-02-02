@@ -42,7 +42,7 @@ export function RecentPost({ post }) {
       {/* IMAGE SECTION */}
       <div className="relative w-full md:w-64 h-48 md:h-auto shrink-0">
         <Image
-          src={image || "/placeholder.jpg"}
+          src={image || "/blogplaceholder.jpg"}
           alt={title}
           fill
           className="object-cover"
@@ -123,7 +123,7 @@ export function BlogCard({ post }) {
       {/* IMAGE SECTION */}
       <div className="relative w-full h-48">
         <Image
-          src={image || "/placeholder.jpg"}
+          src={image || "/blogplaceholder.jpg"}
           alt={title}
           fill
           className="object-cover"
