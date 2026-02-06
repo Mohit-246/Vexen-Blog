@@ -115,8 +115,7 @@ export function BlogCard({ post }) {
     description,
     date,
     author,
-    buttonText,
-  } = post;
+    } = post;
 
   return (
     <div className="border border-neutral-200 rounded-xl overflow-hidden hover:shadow-lg transition">
@@ -172,7 +171,7 @@ export function BlogCard({ post }) {
         </div>
 
         <button className="mt-4 text-sm font-medium text-amber-600 hover:underline">
-          {buttonText || "Read more"} →
+          {"Read more"} →
         </button>
       </div>
     </div>

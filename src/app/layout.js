@@ -15,7 +15,7 @@ const poppin = Poppins({
 }); */
 
 export const metadata = {
-  title: "Vexen Blogs",
+  title: "Vexen" || "Vexen Blogs",
   description:
     "Thoughts on Code, Systems, and Building Software.Writing about backend development, system design, and practical engineering.",
 };

@@ -25,9 +25,9 @@ export default function NewsLetterSub() {
 
           <button
             type="submit"
-            className="flex items-center gap-6 justify-center rounded-lg bg-amber-500 py-3 text-sm font-medium text-white transition hover:bg-gray-900"
+            className="flex items-center justify-center rounded-lg bg-amber-500 py-3 text-sm font-medium text-white transition hover:bg-gray-900"
           >
-            Subscribe <Bookmark size={18} />
+            Subscribe{"  "} <Bookmark size={18} />
           </button>
         </form>
 
@@ -36,7 +36,7 @@ export default function NewsLetterSub() {
         </p>
       </div>
       {/* Information Points */}
-      <div className="mx-auto my-6 max-w-3xl grid md:grid-cols-2 grid-cols-1 gap-x-8 text-sm text-gray-700">
+      <div className="mx-4 md:mx-auto my-6 max-w-md text-sm text-gray-700">
         <p>• Practical backend & system design breakdowns</p>
         <p>• Lessons from building production-ready systems</p>
         <p>• Clear thinking over trendy frameworks</p>
